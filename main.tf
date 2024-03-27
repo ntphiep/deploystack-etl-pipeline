@@ -14,20 +14,33 @@
  * limitations under the License.
  */
 
+terraform {
+  required_providers {
+    google = {
+      source  = "hashicorp/google"
+      version = "4.5.0"
+    }
+  }
+}
+
 variable "project_id" {
-    type = string
+  type = string
+  default = "hiep-dev"
 }
 
 variable "project_number" {
-    type = string
+  type = string
+  default = "839627182696"
 }
 
 variable "region" {
   type = string
+  default = "us-central1"
 }
 
 variable "zone" {
   type = string
+  default = "us-central1-a"
 }
 
 variable "basename" {
